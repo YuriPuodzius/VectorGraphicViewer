@@ -2,75 +2,48 @@
 
 A **.NET 8 + WPF** application developed as a technical challenge to render graphic primitives (lines, circles, and triangles) from different **pluggable data sources** (JSON, XML, and API).  
 
----
-
-## 🚀 Technologies
-- **.NET 8** (WPF Application)
-- **Native Dependency Injection (Microsoft.Extensions.DependencyInjection)**
-- **IOptions** for environment-based configuration
-- **Newtonsoft.Json** (flexible JSON serialization)
-- **System.Xml.Serialization** (XML serialization)
-- Architecture based on **DDD (Domain-Driven Design)**
+The project is designed with **SOLID principles** and follows the **Ports and Adapters (Hexagonal) Architecture**, ensuring a clean separation between the core domain and infrastructure. This makes data sources **easily replaceable** without impacting the business logic, promoting flexibility and maintainability.
 
 ---
 
-## 📂 Project Structure
-- **Application** → Orchestration and configuration (DI, high-level services)  
-- **Domain** → Entities, ValueObjects, Enums, Extensions, and Business Rules  
-- **Infrastructure** → DataProviders (JSON, XML, API), DTOs, and Mappers  
-- **WpfApp** → UI with WPF (primitive rendering)
+## 🚀 Features
+
+- **Primitives domain model** (shapes like circle, triangle, etc.) enriched with **Value Objects** (`Rgba` for color, `Point` for coordinates).  
+- **Configurable data sources**:
+  - JSON (default workload file)
+  - XML
+  - API (illustrative, ready for extension)
+- **Repository + Service pattern**:
+  - `PrimitiveRepository` handles caching and delegates to the selected data source.
+  - `PrimitiveService` orchestrates access to the repository and prepares results for the UI.
+  - `GeometryService` centralizes business rules (e.g., geometric calculations).
+- **Ports and Adapters**: data source interfaces (`IPrimitivesDataSource`) act as **ports**, while concrete implementations (JSON, XML, API) are **adapters**.  
+- **Environment-based configuration**: automatically switches between environments (`Development`, `Production`) using `DOTNET_ENVIRONMENT`.  
+- **In-memory caching** in the repository to simulate efficient retrieval (GetAll vs. GetByType).  
 
 ---
 
-## 🏗️ Layered Architecture
-- **Domain**:  
-  - `Primitive` entity represents lines, circles, and triangles.  
-  - ValueObjects (`PointD`, `Rgba`) and Extensions (`PointExtensions`, `RgbaExtensions`).  
-  - Domain services (`GeometryService`).  
+## 🏗️ Architecture
 
-- **Infrastructure**:  
-  - **DataProviders (pluggable):**  
-    - `PrimitivesJsonSource`  
-    - `PrimitivesXmlSource`  
-    - `PrimitivesApiSource`  
-  - DTOs and Mappers (e.g., `PrimitiveJsonDto` → `Primitive`)  
-  - Repository with cache (`PrimitiveRepository`)  
+- **Domain**  
+  Entities (`Primitive`), Enums, and Value Objects (`Rgba`, `Point`).  
+  Contains the **business core** and rules (GeometryService).  
 
-- **Application**:  
-  - `PrimitiveService` (data orchestration)  
-  - `App.xaml.cs` → DI configuration + Options binding from `appSettings`.  
+- **Application**  
+  Orchestration services (`PrimitiveService`), configuration binding (`IOptions`), and dependency injection setup.  
 
-- **WpfApp**:  
-  - `MainWindow` (UI)  
-  - Next step: render primitives in a canvas.
+- **Infrastructure (Adapters)**  
+  Data providers (`PrimitivesJsonSource`, `PrimitivesXmlSource`, `PrimitivesApiSource`) implementing the `IPrimitivesDataSource` port.  
+  Also includes repository and mapping logic for deserialization.  
+
+- **WPF UI**  
+  Entry point (`App.xaml.cs`) based on MVVM, consuming services via DI.  
+  Responsible only for user interaction and presentation.  
 
 ---
 
-## ⚙️ Configuration
-Configuration is centralized in **`appSettings.{env}.json`** (per environment):
+## 🔧 How to Run
 
-```json
-{
-  "DataSourceConfig": {
-    "PrimitiveDataSourceType": 1, // 1=Json, 2=Xml, 3=Api
-    "Json": {
-      "PrimitivesPath": "Workloads/primitives.json",
-      "AllowComments": false,
-      "CaseInsensitive": true
-    },
-    "Xml": {
-      "PrimitivesPath": "Workloads/primitives.xml",
-      "RootElement": "primitives",
-      "Namespace": null,
-      "ValidateSchema": false,
-      "SchemaPath": null
-    },
-    "Api": {
-      "BaseUrl": "https://www.wscad.com/",
-      "PrimitivesEndpoint": "/api/primitives",
-      "ApiKey": "",
-      "TimeoutSeconds": 20,
-      "MaxRetries": 2
-    }
-  }
-}
+1. Set environment variable (default = Development):
+   ```powershell
+   $env:DOTNET_ENVIRONMENT="Development"
