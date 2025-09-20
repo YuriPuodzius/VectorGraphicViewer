@@ -1,0 +1,174 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\yurip\\source\\repos\\Wscad.VectorGraphicViewer\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{761B7801-8860-5158-C347-C0D54E85811A}|Wscad.VectorGraphicViewer.Infrastructure\\Wscad.VectorGraphicViewer.Infrastructure.csproj|c:\\users\\yurip\\source\\repos\\wscad.vectorgraphicviewer\\wscad.vectorgraphicviewer.infrastructure\\workloads\\primitives.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{761B7801-8860-5158-C347-C0D54E85811A}|Wscad.VectorGraphicViewer.Infrastructure\\Wscad.VectorGraphicViewer.Infrastructure.csproj|solutionrelative:wscad.vectorgraphicviewer.infrastructure\\workloads\\primitives.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{761B7801-8860-5158-C347-C0D54E85811A}|Wscad.VectorGraphicViewer.Infrastructure\\Wscad.VectorGraphicViewer.Infrastructure.csproj|c:\\users\\yurip\\source\\repos\\wscad.vectorgraphicviewer\\wscad.vectorgraphicviewer.infrastructure\\workloads\\primitives.csv||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{761B7801-8860-5158-C347-C0D54E85811A}|Wscad.VectorGraphicViewer.Infrastructure\\Wscad.VectorGraphicViewer.Infrastructure.csproj|solutionrelative:wscad.vectorgraphicviewer.infrastructure\\workloads\\primitives.csv||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{761B7801-8860-5158-C347-C0D54E85811A}|Wscad.VectorGraphicViewer.Infrastructure\\Wscad.VectorGraphicViewer.Infrastructure.csproj|c:\\users\\yurip\\source\\repos\\wscad.vectorgraphicviewer\\wscad.vectorgraphicviewer.infrastructure\\dataproviders\\sources\\primitivesjsonsource.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{761B7801-8860-5158-C347-C0D54E85811A}|Wscad.VectorGraphicViewer.Infrastructure\\Wscad.VectorGraphicViewer.Infrastructure.csproj|solutionrelative:wscad.vectorgraphicviewer.infrastructure\\dataproviders\\sources\\primitivesjsonsource.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{761B7801-8860-5158-C347-C0D54E85811A}|Wscad.VectorGraphicViewer.Infrastructure\\Wscad.VectorGraphicViewer.Infrastructure.csproj|c:\\users\\yurip\\source\\repos\\wscad.vectorgraphicviewer\\wscad.vectorgraphicviewer.infrastructure\\dataproviders\\sources\\primitivesxmlsource.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{761B7801-8860-5158-C347-C0D54E85811A}|Wscad.VectorGraphicViewer.Infrastructure\\Wscad.VectorGraphicViewer.Infrastructure.csproj|solutionrelative:wscad.vectorgraphicviewer.infrastructure\\dataproviders\\sources\\primitivesxmlsource.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{34E1FA61-79E4-08D0-7E2D-B559C8F1634C}|Wscad.VectorGraphicViewer.Domain\\Wscad.VectorGraphicViewer.Domain.csproj|c:\\users\\yurip\\source\\repos\\wscad.vectorgraphicviewer\\wscad.vectorgraphicviewer.domain\\extensions\\rgbaextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34E1FA61-79E4-08D0-7E2D-B559C8F1634C}|Wscad.VectorGraphicViewer.Domain\\Wscad.VectorGraphicViewer.Domain.csproj|solutionrelative:wscad.vectorgraphicviewer.domain\\extensions\\rgbaextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{34E1FA61-79E4-08D0-7E2D-B559C8F1634C}|Wscad.VectorGraphicViewer.Domain\\Wscad.VectorGraphicViewer.Domain.csproj|c:\\users\\yurip\\source\\repos\\wscad.vectorgraphicviewer\\wscad.vectorgraphicviewer.domain\\extensions\\pointextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34E1FA61-79E4-08D0-7E2D-B559C8F1634C}|Wscad.VectorGraphicViewer.Domain\\Wscad.VectorGraphicViewer.Domain.csproj|solutionrelative:wscad.vectorgraphicviewer.domain\\extensions\\pointextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{761B7801-8860-5158-C347-C0D54E85811A}|Wscad.VectorGraphicViewer.Infrastructure\\Wscad.VectorGraphicViewer.Infrastructure.csproj|c:\\users\\yurip\\source\\repos\\wscad.vectorgraphicviewer\\wscad.vectorgraphicviewer.infrastructure\\dataproviders\\mappers\\primitivexmlmapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{761B7801-8860-5158-C347-C0D54E85811A}|Wscad.VectorGraphicViewer.Infrastructure\\Wscad.VectorGraphicViewer.Infrastructure.csproj|solutionrelative:wscad.vectorgraphicviewer.infrastructure\\dataproviders\\mappers\\primitivexmlmapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{761B7801-8860-5158-C347-C0D54E85811A}|Wscad.VectorGraphicViewer.Infrastructure\\Wscad.VectorGraphicViewer.Infrastructure.csproj|c:\\users\\yurip\\source\\repos\\wscad.vectorgraphicviewer\\wscad.vectorgraphicviewer.infrastructure\\dataproviders\\mappers\\primitivejsonmapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{761B7801-8860-5158-C347-C0D54E85811A}|Wscad.VectorGraphicViewer.Infrastructure\\Wscad.VectorGraphicViewer.Infrastructure.csproj|solutionrelative:wscad.vectorgraphicviewer.infrastructure\\dataproviders\\mappers\\primitivejsonmapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDC7D482-3F23-A54A-F879-A2856618CB24}|Wscad.VectorGraphicViewer.WpfApp\\Wscad.VectorGraphicViewer.WpfApp.csproj|c:\\users\\yurip\\source\\repos\\wscad.vectorgraphicviewer\\wscad.vectorgraphicviewer.wpfapp\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EDC7D482-3F23-A54A-F879-A2856618CB24}|Wscad.VectorGraphicViewer.WpfApp\\Wscad.VectorGraphicViewer.WpfApp.csproj|solutionrelative:wscad.vectorgraphicviewer.wpfapp\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\yurip\\source\\repos\\Wscad.VectorGraphicViewer\\Wscad.VectorGraphicViewer.WpfApp\\App.xaml.cs",
+              "RelativeDocumentMoniker": "Wscad.VectorGraphicViewer.WpfApp\\App.xaml.cs",
+              "ToolTip": "C:\\Users\\yurip\\source\\repos\\Wscad.VectorGraphicViewer\\Wscad.VectorGraphicViewer.WpfApp\\App.xaml.cs",
+              "RelativeToolTip": "Wscad.VectorGraphicViewer.WpfApp\\App.xaml.cs",
+              "ViewState": "AgIAAEAAAAAAAAAAAAAnwFYAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-18T12:12:08.282Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "primitives.csv",
+              "DocumentMoniker": "C:\\Users\\yurip\\source\\repos\\Wscad.VectorGraphicViewer\\Wscad.VectorGraphicViewer.Infrastructure\\Workloads\\primitives.csv",
+              "RelativeDocumentMoniker": "Wscad.VectorGraphicViewer.Infrastructure\\Workloads\\primitives.csv",
+              "ToolTip": "C:\\Users\\yurip\\source\\repos\\Wscad.VectorGraphicViewer\\Wscad.VectorGraphicViewer.Infrastructure\\Workloads\\primitives.csv",
+              "RelativeToolTip": "Wscad.VectorGraphicViewer.Infrastructure\\Workloads\\primitives.csv",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002120|",
+              "WhenOpened": "2025-09-20T15:22:36.889Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "primitives.json",
+              "DocumentMoniker": "C:\\Users\\yurip\\source\\repos\\Wscad.VectorGraphicViewer\\Wscad.VectorGraphicViewer.Infrastructure\\Workloads\\primitives.json",
+              "RelativeDocumentMoniker": "Wscad.VectorGraphicViewer.Infrastructure\\Workloads\\primitives.json",
+              "ToolTip": "C:\\Users\\yurip\\source\\repos\\Wscad.VectorGraphicViewer\\Wscad.VectorGraphicViewer.Infrastructure\\Workloads\\primitives.json",
+              "RelativeToolTip": "Wscad.VectorGraphicViewer.Infrastructure\\Workloads\\primitives.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-09-20T15:22:01.431Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PrimitivesXmlSource.cs",
+              "DocumentMoniker": "C:\\Users\\yurip\\source\\repos\\Wscad.VectorGraphicViewer\\Wscad.VectorGraphicViewer.Infrastructure\\DataProviders\\Sources\\PrimitivesXmlSource.cs",
+              "RelativeDocumentMoniker": "Wscad.VectorGraphicViewer.Infrastructure\\DataProviders\\Sources\\PrimitivesXmlSource.cs",
+              "ToolTip": "C:\\Users\\yurip\\source\\repos\\Wscad.VectorGraphicViewer\\Wscad.VectorGraphicViewer.Infrastructure\\DataProviders\\Sources\\PrimitivesXmlSource.cs",
+              "RelativeToolTip": "Wscad.VectorGraphicViewer.Infrastructure\\DataProviders\\Sources\\PrimitivesXmlSource.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-20T15:12:20.18Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PrimitivesJsonSource.cs",
+              "DocumentMoniker": "C:\\Users\\yurip\\source\\repos\\Wscad.VectorGraphicViewer\\Wscad.VectorGraphicViewer.Infrastructure\\DataProviders\\Sources\\PrimitivesJsonSource.cs",
+              "RelativeDocumentMoniker": "Wscad.VectorGraphicViewer.Infrastructure\\DataProviders\\Sources\\PrimitivesJsonSource.cs",
+              "ToolTip": "C:\\Users\\yurip\\source\\repos\\Wscad.VectorGraphicViewer\\Wscad.VectorGraphicViewer.Infrastructure\\DataProviders\\Sources\\PrimitivesJsonSource.cs",
+              "RelativeToolTip": "Wscad.VectorGraphicViewer.Infrastructure\\DataProviders\\Sources\\PrimitivesJsonSource.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAQwC0AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-20T15:04:44.345Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "RgbaExtensions.cs",
+              "DocumentMoniker": "C:\\Users\\yurip\\source\\repos\\Wscad.VectorGraphicViewer\\Wscad.VectorGraphicViewer.Domain\\Extensions\\RgbaExtensions.cs",
+              "RelativeDocumentMoniker": "Wscad.VectorGraphicViewer.Domain\\Extensions\\RgbaExtensions.cs",
+              "ToolTip": "C:\\Users\\yurip\\source\\repos\\Wscad.VectorGraphicViewer\\Wscad.VectorGraphicViewer.Domain\\Extensions\\RgbaExtensions.cs",
+              "RelativeToolTip": "Wscad.VectorGraphicViewer.Domain\\Extensions\\RgbaExtensions.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAA6wB4AAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-20T14:54:51.683Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "PointExtensions.cs",
+              "DocumentMoniker": "C:\\Users\\yurip\\source\\repos\\Wscad.VectorGraphicViewer\\Wscad.VectorGraphicViewer.Domain\\Extensions\\PointExtensions.cs",
+              "RelativeDocumentMoniker": "Wscad.VectorGraphicViewer.Domain\\Extensions\\PointExtensions.cs",
+              "ToolTip": "C:\\Users\\yurip\\source\\repos\\Wscad.VectorGraphicViewer\\Wscad.VectorGraphicViewer.Domain\\Extensions\\PointExtensions.cs",
+              "RelativeToolTip": "Wscad.VectorGraphicViewer.Domain\\Extensions\\PointExtensions.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAIA+wBoAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-20T14:52:18.845Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "PrimitiveXmlMapper.cs",
+              "DocumentMoniker": "C:\\Users\\yurip\\source\\repos\\Wscad.VectorGraphicViewer\\Wscad.VectorGraphicViewer.Infrastructure\\DataProviders\\Mappers\\PrimitiveXmlMapper.cs",
+              "RelativeDocumentMoniker": "Wscad.VectorGraphicViewer.Infrastructure\\DataProviders\\Mappers\\PrimitiveXmlMapper.cs",
+              "ToolTip": "C:\\Users\\yurip\\source\\repos\\Wscad.VectorGraphicViewer\\Wscad.VectorGraphicViewer.Infrastructure\\DataProviders\\Mappers\\PrimitiveXmlMapper.cs",
+              "RelativeToolTip": "Wscad.VectorGraphicViewer.Infrastructure\\DataProviders\\Mappers\\PrimitiveXmlMapper.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAA+wBQAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-20T14:52:07.846Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "PrimitiveJsonMapper.cs",
+              "DocumentMoniker": "C:\\Users\\yurip\\source\\repos\\Wscad.VectorGraphicViewer\\Wscad.VectorGraphicViewer.Infrastructure\\DataProviders\\Mappers\\PrimitiveJsonMapper.cs",
+              "RelativeDocumentMoniker": "Wscad.VectorGraphicViewer.Infrastructure\\DataProviders\\Mappers\\PrimitiveJsonMapper.cs",
+              "ToolTip": "C:\\Users\\yurip\\source\\repos\\Wscad.VectorGraphicViewer\\Wscad.VectorGraphicViewer.Infrastructure\\DataProviders\\Mappers\\PrimitiveJsonMapper.cs",
+              "RelativeToolTip": "Wscad.VectorGraphicViewer.Infrastructure\\DataProviders\\Mappers\\PrimitiveJsonMapper.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAmwBUAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-20T14:51:36.197Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

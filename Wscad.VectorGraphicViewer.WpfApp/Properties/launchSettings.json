@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Wscad.VectorGraphicViewer.WpfApp": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "DOTNET_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}

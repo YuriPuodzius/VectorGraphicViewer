@@ -1,0 +1,11 @@
+C:\Users\yurip\source\repos\Wscad.VectorGraphicViewer\Wscad.VectorGraphicViewer.Domain\bin\Debug\net8.0\Wscad.VectorGraphicViewer.Domain.deps.json
+C:\Users\yurip\source\repos\Wscad.VectorGraphicViewer\Wscad.VectorGraphicViewer.Domain\bin\Debug\net8.0\Wscad.VectorGraphicViewer.Domain.dll
+C:\Users\yurip\source\repos\Wscad.VectorGraphicViewer\Wscad.VectorGraphicViewer.Domain\bin\Debug\net8.0\Wscad.VectorGraphicViewer.Domain.pdb
+C:\Users\yurip\source\repos\Wscad.VectorGraphicViewer\Wscad.VectorGraphicViewer.Domain\obj\Debug\net8.0\Wscad.VectorGraphicViewer.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\yurip\source\repos\Wscad.VectorGraphicViewer\Wscad.VectorGraphicViewer.Domain\obj\Debug\net8.0\Wscad.VectorGraphicViewer.Domain.AssemblyInfoInputs.cache
+C:\Users\yurip\source\repos\Wscad.VectorGraphicViewer\Wscad.VectorGraphicViewer.Domain\obj\Debug\net8.0\Wscad.VectorGraphicViewer.Domain.AssemblyInfo.cs
+C:\Users\yurip\source\repos\Wscad.VectorGraphicViewer\Wscad.VectorGraphicViewer.Domain\obj\Debug\net8.0\Wscad.VectorGraphicViewer.Domain.csproj.CoreCompileInputs.cache
+C:\Users\yurip\source\repos\Wscad.VectorGraphicViewer\Wscad.VectorGraphicViewer.Domain\obj\Debug\net8.0\Wscad.VectorGraphicViewer.Domain.dll
+C:\Users\yurip\source\repos\Wscad.VectorGraphicViewer\Wscad.VectorGraphicViewer.Domain\obj\Debug\net8.0\refint\Wscad.VectorGraphicViewer.Domain.dll
+C:\Users\yurip\source\repos\Wscad.VectorGraphicViewer\Wscad.VectorGraphicViewer.Domain\obj\Debug\net8.0\Wscad.VectorGraphicViewer.Domain.pdb
+C:\Users\yurip\source\repos\Wscad.VectorGraphicViewer\Wscad.VectorGraphicViewer.Domain\obj\Debug\net8.0\ref\Wscad.VectorGraphicViewer.Domain.dll
