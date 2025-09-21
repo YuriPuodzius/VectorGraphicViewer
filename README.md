@@ -1,8 +1,10 @@
 # Wscad.VectorGraphicViewer
 
-A **.NET 8 + WPF** application developed as a technical challenge to render graphic primitives (lines, circles, and triangles) from different **pluggable data sources** (JSON, XML, and API).  
+A **.NET 8 + WPF** application developed as a technical challenge to render graphic primitives (lines, circles, and triangles) from different **pluggable data sources** (JSON, XML, and API).
 
-The project is designed with **SOLID principles** and follows the **Ports and Adapters (Hexagonal) Architecture**, ensuring a clean separation between the core domain and infrastructure. This makes data sources **easily replaceable** without impacting the business logic, promoting flexibility and maintainability.
+The project is designed with **SOLID** principles and follows the **Ports and Adapters (Hexagonal) Architecture**, ensuring a clean separation between the core domain and infrastructure. This makes data sources easily replaceable without impacting the business logic, promoting flexibility and maintainability.
+
+📖 For a deeper dive into the design, see [ARCHITECTURE.md](ARCHITECTURE.md).
 
 ---
 
