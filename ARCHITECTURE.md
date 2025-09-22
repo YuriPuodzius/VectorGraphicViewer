@@ -8,68 +8,65 @@ This approach allows the system to easily support **pluggable data sources** (e.
 
 ---
 
-## 🗂️ Project Structure
+## 📁 Project Structure
 
-Wscad.VectorGraphicViewer
-├── Wscad.VectorGraphicViewer.Application   → Orchestration / Services that coordinate use cases
-│   └── Orchestration
-│       ├── Interfaces
-│       │   └── IPrimitiveService.cs
-│       └── PrimitiveService.cs
-│
-├── Wscad.VectorGraphicViewer.Domain        → Core business logic (agnostic to data sources)
-│   ├── Contracts
-│   │   ├── Repositories
-│   │   │   ├── IPrimitiveRepository.cs
-│   │   │   └── IPrimitivesDataSource.cs
-│   │   └── Services
-│   │       └── IGeometryService.cs
-│   ├── Entities
-│   │   └── Primitive.cs
-│   ├── Enums
-│   │   ├── PrimitiveDataSourceTypeEnum.cs
-│   │   └── PrimitiveTypeEnum.cs
-│   ├── Extensions
-│   │   ├── PointExtensions.cs
-│   │   ├── PrimitiveTypeExtensions.cs
-│   │   └── RgbaExtensions.cs
-│   ├── Services
-│   │   └── GeometryService.cs
-│   └── ValueObjects
-│       ├── PointD.cs
-│       └── Rgba.cs
-│
-├── Wscad.VectorGraphicViewer.Infrastructure → Adapters to external systems (DataSources, DTOs, etc.)
-│   ├── DataProviders
-│   │   ├── Contracts
-│   │   │   └── IPrimitivesDataSource.cs
-│   │   ├── DTOs
-│   │   │   ├── PrimitiveJsonDto.cs
-│   │   │   └── PrimitiveXmlDto.cs
-│   │   ├── Mappers
-│   │   │   ├── PrimitiveJsonMapper.cs
-│   │   │   └── PrimitiveXmlMapper.cs
-│   │   ├── Options
-│   │   │   ├── PrimitivesApiOptions.cs
-│   │   │   ├── PrimitivesJsonOptions.cs
-│   │   │   └── PrimitivesXmlOptions.cs
-│   │   └── Sources
-│   │       ├── PrimitivesApiSource.cs
-│   │       ├── PrimitivesJsonSource.cs
-│   │       └── PrimitivesXmlSource.cs
-│   └── Repository
-│       └── PrimitiveRepository.cs
-│
-├── Wscad.VectorGraphicViewer.WpfApp        → Presentation Layer (UI with WPF)
-│   ├── App.xaml / App.xaml.cs
-│   ├── appSettings.{Development|Production|Staging}.json
-│   ├── AssemblyInfo.cs
-│   └── MainWindow.xaml
-│
-└── Workloads                               → Example input files
-├── primitives.csv
-├── primitives.json
-└── primitives.xml
+```text
+Wscad.VectorGraphicViewer.Application
+└─ Orchestration
+   ├─ Interfaces
+   │  └─ IPrimitiveService.cs
+   └─ PrimitiveService.cs
+
+Wscad.VectorGraphicViewer.Domain
+├─ Contracts
+│  ├─ Repositories
+│  │  └─ IPrimitiveRepository.cs
+│  └─ IPrimitivesDataSource.cs
+├─ Services
+│  └─ IGeometryService.cs
+├─ Entities
+│  └─ Primitive.cs
+├─ Enums
+│  ├─ PrimitiveDataSourceTypeEnum.cs
+│  └─ PrimitiveTypeEnum.cs
+├─ Extensions
+│  ├─ PointExtensions.cs
+│  └─ RgbaExtensions.cs
+├─ Services
+│  └─ GeometryService.cs
+└─ ValueObjects
+   ├─ PointD.cs
+   └─ Rgba.cs
+
+Wscad.VectorGraphicViewer.Infrastructure
+└─ DataProviders
+   ├─ Contracts
+   │  └─ IPrimitivesDataSource.cs
+   ├─ DTOs
+   │  ├─ PrimitiveJsonDto.cs
+   │  └─ PrimitiveXmlDto.cs
+   ├─ Mappers
+   │  ├─ PrimitiveJsonMapper.cs
+   │  └─ PrimitiveXmlMapper.cs
+   ├─ Options
+   │  ├─ PrimitivesApiOptions.cs
+   │  ├─ PrimitivesJsonOptions.cs
+   │  └─ PrimitivesXmlOptions.cs
+   ├─ Sources
+   │  ├─ PrimitivesApiSource.cs
+   │  ├─ PrimitivesJsonSource.cs
+   │  └─ PrimitivesXmlSource.cs
+   ├─ Repository
+   │  └─ PrimitiveRepository.cs
+   └─ Workloads
+      ├─ primitives.csv
+      ├─ primitives.json
+      └─ primitives.xml
+
+Wscad.VectorGraphicViewer.WpfApp
+├─ App.xaml / App.xaml.cs
+├─ MainWindow.xaml
+└─ appSettings.(Development|Staging|Production).json
 
 ---
 
@@ -95,8 +92,6 @@ Wscad.VectorGraphicViewer
    - Configures Dependency Injection.  
    - Reads configuration (`appSettings`) to decide which DataSource to bind at runtime.  
    - Displays primitives on screen.  
-
----
 
 ---
 
