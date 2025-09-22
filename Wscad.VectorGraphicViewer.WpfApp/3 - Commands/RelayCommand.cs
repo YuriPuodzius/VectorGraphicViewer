@@ -1,4 +1,4 @@
-﻿namespace Wscad.VectorGraphicViewer.WpfApp.Infrastructure;
+﻿namespace Wscad.VectorGraphicViewer.WpfApp.Commands;
 
 using System.Windows.Input;
 

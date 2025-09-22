@@ -12,16 +12,16 @@
             <RowDefinition Height="Auto"/>
             <!-- subtítulo -->
             <RowDefinition Height="12"/>
-            <!-- espaçamento -->
+            <!-- espaço -->
             <RowDefinition Height="Auto"/>
             <!-- linha: combo + botão -->
             <RowDefinition Height="16"/>
-            <!-- espaçamento -->
-            <RowDefinition Height="2*"/>
+            <!-- espaço -->
+            <RowDefinition Height="Auto"/>
             <!-- painel de debug -->
-            <RowDefinition Height="10"/>
-            <!-- espaçamento -->
-            <RowDefinition Height="3*"/>
+            <RowDefinition Height="12"/>
+            <!-- espaço -->
+            <RowDefinition Height="*"/>
             <!-- área de desenho -->
         </Grid.RowDefinitions>
 
@@ -41,7 +41,6 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="260"/>
                 <ColumnDefinition Width="8"/>
-                <!-- espaçador -->
                 <ColumnDefinition Width="Auto"/>
             </Grid.ColumnDefinitions>
 
@@ -59,21 +58,21 @@
                     Command="{Binding DrawCommand}" />
         </Grid>
 
-        <!-- Painel de Debug -->
-        <GroupBox Grid.Row="6" Header="Debug" Margin="0,0,0,4">
-            <TextBox Text="{Binding DebugText}" 
+        <!-- Painel de Debug (duas linhas) -->
+        <GroupBox Grid.Row="6" Header="Debug" Margin="0,0,0,0">
+            <TextBox Text="{Binding DebugText}"
                      IsReadOnly="True"
                      TextWrapping="Wrap"
-                     VerticalScrollBarVisibility="Auto"
+                     VerticalScrollBarVisibility="Disabled"
                      AcceptsReturn="True"
                      BorderThickness="0"
-                     Background="Transparent"/>
+                     Background="Transparent"
+                     Height="40"/>
         </GroupBox>
 
-        <!-- Área de desenho -->
-        <Border Grid.Row="8" BorderBrush="#DDD" BorderThickness="1"
-                CornerRadius="6" Padding="8">
+        <!-- Área de desenho (apenas UM GroupBox, como o Debug) -->
+        <GroupBox Grid.Row="8" Header="Drawn Area">
             <Canvas x:Name="Surface" Background="White"/>
-        </Border>
+        </GroupBox>
     </Grid>
 </Window>

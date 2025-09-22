@@ -5,9 +5,9 @@ using System.Windows.Input;
 using Wscad.VectorGraphicViewer.Application.Orchestration.Interfaces;
 using Wscad.VectorGraphicViewer.Domain.Entities;
 using Wscad.VectorGraphicViewer.Domain.Enums;
-using Wscad.VectorGraphicViewer.WpfApp.Infrastructure;
+using Wscad.VectorGraphicViewer.WpfApp.Commands;
 
-namespace Wscad.VectorGraphicViewer.WpfApp
+namespace Wscad.VectorGraphicViewer.WpfApp.ViewModels
 {
     public class MainViewModel : INotifyPropertyChanged
     {

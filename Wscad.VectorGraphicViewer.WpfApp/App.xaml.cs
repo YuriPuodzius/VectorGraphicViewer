@@ -17,6 +17,8 @@ using Wscad.VectorGraphicViewer.Infrastructure.DataProviders.Options;
 using Wscad.VectorGraphicViewer.Infrastructure.DataProviders.Sources;
 using Wscad.VectorGraphicViewer.Infrastructure.Repository;
 using Wscad.VectorGraphicViewer.WpfApp;
+using Wscad.VectorGraphicViewer.WpfApp.ViewModels;
+
 
 
 // Alias to avoid conflict with System.Windows.Application
@@ -35,8 +37,8 @@ public partial class App : WpfApplication
         Host = Microsoft.Extensions.Hosting.Host.CreateDefaultBuilder()
             .ConfigureAppConfiguration(cfg =>
             {
-                cfg.AddJsonFile("appSettings/appsettings.json", optional: true, reloadOnChange: true)
-                   .AddJsonFile($"appSettings/appsettings.{env}.json", optional: true, reloadOnChange: true)
+                cfg.AddJsonFile("0 - AppSettings/appsettings.json", optional: true, reloadOnChange: true)
+                   .AddJsonFile($"0 - AppSettings/appsettings.{env}.json", optional: true, reloadOnChange: true)
                    .AddEnvironmentVariables();
             })
             .ConfigureServices((ctx, services) =>
