@@ -35,8 +35,8 @@ public partial class App : WpfApplication
         Host = Microsoft.Extensions.Hosting.Host.CreateDefaultBuilder()
             .ConfigureAppConfiguration(cfg =>
             {
-                cfg.AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
-                   .AddJsonFile($"appsettings.{env}.json", optional: true, reloadOnChange: true)
+                cfg.AddJsonFile("appSettings/appsettings.json", optional: true, reloadOnChange: true)
+                   .AddJsonFile($"appSettings/appsettings.{env}.json", optional: true, reloadOnChange: true)
                    .AddEnvironmentVariables();
             })
             .ConfigureServices((ctx, services) =>

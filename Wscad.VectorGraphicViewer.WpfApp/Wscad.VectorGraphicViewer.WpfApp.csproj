@@ -25,16 +25,16 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="appSettings.Development.json">
+    <None Update="appSettings\appSettings.Development.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="appSettings.json">
+    <None Update="appSettings\appSettings.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="appSettings.Production.json">
+    <None Update="appSettings\appSettings.Production.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="appSettings.Staging.json">
+    <None Update="appSettings\appSettings.Staging.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
