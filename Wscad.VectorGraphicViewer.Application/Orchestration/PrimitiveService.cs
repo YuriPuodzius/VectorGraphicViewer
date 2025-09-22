@@ -6,7 +6,6 @@ using Wscad.VectorGraphicViewer.Domain.Contracts;
 using Wscad.VectorGraphicViewer.Domain.Entities;
 using Wscad.VectorGraphicViewer.Domain.Enums;
 using Wscad.VectorGraphicViewer.Domain.Services;
-using Wscad.VectorGraphicViewer.Domain.ValueObjects;
 
 public sealed class PrimitiveService : IPrimitiveService
 {
@@ -41,5 +40,13 @@ public sealed class PrimitiveService : IPrimitiveService
         _ = _geometry.GetColor(primitiveTyped);
 
         return primitiveTyped;
+    }
+
+    public IReadOnlyList<PrimitiveTypeEnum> GetAvailablePrimitives()
+    {
+        IReadOnlyList<Primitive> primitives = _repo.GetAll();
+        IReadOnlyList<PrimitiveTypeEnum> availablePrimitives = _geometry.AvailablePrimitivesRules(primitives);
+        
+        return availablePrimitives;
     }
 }

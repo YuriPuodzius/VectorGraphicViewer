@@ -7,4 +7,5 @@ public interface IPrimitiveService
 {
     IReadOnlyList<Primitive> GetAll();
     Primitive? GetByType(PrimitiveTypeEnum type);
+    IReadOnlyList<PrimitiveTypeEnum> GetAvailablePrimitives();
 }

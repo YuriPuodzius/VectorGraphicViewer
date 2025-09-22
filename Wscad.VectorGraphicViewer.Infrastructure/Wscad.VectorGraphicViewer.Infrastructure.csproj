@@ -16,9 +16,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="Workloads\primitives.csv">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
     <None Update="Workloads\primitives.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

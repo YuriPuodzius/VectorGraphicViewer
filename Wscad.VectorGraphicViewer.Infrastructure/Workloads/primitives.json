@@ -3,14 +3,16 @@
     "type": "line",
     "a": "-1.5; 3.4",
     "b": "2.2; 5.7",
-    "color": "127; 255; 255; 255"
+    "color": "127; 255; 255; 255",
+    "isActive": true
   },
   {
     "type": "circle",
     "center": "0; 0",
     "radius": 15.0,
     "filled": false,
-    "color": "127; 255; 0; 0"
+    "color": "127; 255; 0; 0",
+    "isActive": true
   },
   {
     "type": "triangle",
@@ -18,6 +20,7 @@
     "b": "15; -20.3",
     "c": "0; 21",
     "filled": true,
-    "color": "127; 255; 0; 255"
+    "color": "127; 255; 0; 255",
+    "isActive": true
   }
 ]

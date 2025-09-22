@@ -21,7 +21,8 @@ internal static class PrimitiveXmlMapper
             Center = string.IsNullOrWhiteSpace(dto.Center) ? null : PointExtensions.Parse(dto.Center),
             Radius = dto.Radius,
             Filled = dto.Filled ?? false,
-            Color = string.IsNullOrWhiteSpace(dto.Color) ? new Rgba(0, 0, 0, 255) : RgbaExtensions.Parse(dto.Color)
+            Color = string.IsNullOrWhiteSpace(dto.Color) ? new Rgba(0, 0, 0, 255) : RgbaExtensions.Parse(dto.Color),
+            IsActive = dto.IsActive ?? true
         };
 
         return primitive;

@@ -22,7 +22,8 @@ internal static class PrimitiveJsonMapper
             Center = string.IsNullOrWhiteSpace(dto.center) ? null : PointExtensions.Parse(dto.center),
             Radius = dto.radius,
             Filled = dto.filled ?? false,
-            Color = string.IsNullOrWhiteSpace(dto.color) ? new Rgba(0, 0, 0, 255) : RgbaExtensions.Parse(dto.color)
+            Color = string.IsNullOrWhiteSpace(dto.color) ? new Rgba(0, 0, 0, 255) : RgbaExtensions.Parse(dto.color),
+            IsActive = dto.isActive ?? true
         };
 
         return primitive;

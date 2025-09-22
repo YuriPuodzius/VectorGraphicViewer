@@ -20,4 +20,5 @@ internal sealed class PrimitiveJsonDto
 
     // Color as text (e.g., "127; 255; 0; 255")
     public string? color { get; set; }
+    public bool? isActive { get; set; }
 }

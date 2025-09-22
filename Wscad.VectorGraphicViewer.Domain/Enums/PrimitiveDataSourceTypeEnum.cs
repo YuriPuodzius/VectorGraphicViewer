@@ -3,8 +3,6 @@
 public enum PrimitiveDataSourceTypeEnum
 {
     Json = 1,
-    Csv = 2,
-    Xml = 3,
-    Api = 4,
-    Database = 5
+    Xml = 2,
+    Api = 3
 }

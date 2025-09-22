@@ -7,7 +7,6 @@ using Wscad.VectorGraphicViewer.Application.Orchestration;
 using Wscad.VectorGraphicViewer.Application.Orchestration.Interfaces;
 using Wscad.VectorGraphicViewer.Domain.Contracts;
 using Wscad.VectorGraphicViewer.Domain.Contracts.Repositories;
-using Wscad.VectorGraphicViewer.Domain.Entities;
 
 // Domain
 using Wscad.VectorGraphicViewer.Domain.Enums;
@@ -17,6 +16,8 @@ using Wscad.VectorGraphicViewer.Domain.Services;
 using Wscad.VectorGraphicViewer.Infrastructure.DataProviders.Options;
 using Wscad.VectorGraphicViewer.Infrastructure.DataProviders.Sources;
 using Wscad.VectorGraphicViewer.Infrastructure.Repository;
+using Wscad.VectorGraphicViewer.WpfApp;
+
 
 // Alias to avoid conflict with System.Windows.Application
 using WpfApplication = System.Windows.Application;
@@ -47,7 +48,7 @@ public partial class App : WpfApplication
                 IConfiguration ds = ctx.Configuration.GetSection("DataSourceConfig");
 
                 // Lemos número (1,2,3...) e convertemos para o enum. Default = Json.
-                int typeInt =  ds.GetValue<int?>("DataSourceConfig:PrimitiveDataSourceType") ?? (int)PrimitiveDataSourceTypeEnum.Json;
+                int typeInt = ds.GetValue<int?>("PrimitiveDataSourceType") ?? (int)PrimitiveDataSourceTypeEnum.Json;
                 PrimitiveDataSourceTypeEnum kind = (PrimitiveDataSourceTypeEnum)typeInt;
 
 
@@ -75,20 +76,21 @@ public partial class App : WpfApplication
                 services.AddSingleton<IPrimitiveService, PrimitiveService>(); // Orchestrator
                 services.AddSingleton<IGeometryService, GeometryService>();   // Domain service (puro)
                 services.AddSingleton<IPrimitiveRepository, PrimitiveRepository>();
-
+                services.AddSingleton<MainViewModel>();
             })
             .ConfigureLogging(lb => lb.AddConsole())
             .Build();
 
         base.OnStartup(e);
 
-        IPrimitiveService service = Host.Services.GetRequiredService<IPrimitiveService>();
+        //IPrimitiveService service = Host.Services.GetRequiredService<IPrimitiveService>();
 
-        IReadOnlyList<Primitive> all = service.GetAll(); // test GetAll
-        Primitive? onlyCircles = service.GetByType(PrimitiveTypeEnum.Circle); // test GetByType
-
+        //IReadOnlyList<Primitive> all = service.GetAll(); // test GetAll
+        //Primitive? onlyCircles = service.GetByType(PrimitiveTypeEnum.Circle); // test GetByType
 
         MainWindow main = Host.Services.GetRequiredService<MainWindow>();
+        main.DataContext = Host.Services.GetRequiredService<MainViewModel>();
+
         main.Show();
     }
 

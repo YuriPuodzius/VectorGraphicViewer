@@ -17,6 +17,7 @@ public class Primitive
     public double? Radius { get; set; }
     public bool? Filled { get; set; }
     public ValueObjects.Rgba? Color { get; set; }   // torna opcional
+    public bool IsActive { get; set; } = true;
 
     public PrimitiveTypeEnum Kind => PrimitiveTypeExtensions.ParseOrUnknown(Type);
 }
