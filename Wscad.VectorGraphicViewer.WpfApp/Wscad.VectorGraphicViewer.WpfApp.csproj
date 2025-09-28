@@ -9,6 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Assets\WSCAD-Background-VectorGraphicViewer.png" />
     <None Remove="README.md" />
   </ItemGroup>
 
@@ -22,6 +23,12 @@
   <ItemGroup>
     <ProjectReference Include="..\Wscad.VectorGraphicViewer.Application\Wscad.VectorGraphicViewer.Application.csproj" />
     <ProjectReference Include="..\Wscad.VectorGraphicViewer.Infrastructure\Wscad.VectorGraphicViewer.Infrastructure.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\WSCAD-Background-VectorGraphicViewer.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
   <ItemGroup>

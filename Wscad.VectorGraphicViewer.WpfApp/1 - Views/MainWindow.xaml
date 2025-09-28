@@ -3,6 +3,51 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Electrix by WSCAD" Height="520" Width="800"
         WindowStartupLocation="CenterScreen">
+
+    <!-- Estilos -->
+    <Window.Resources>
+        <!-- Botão primário (amarelo WSCAD) -->
+        <Style x:Key="PrimaryButton" TargetType="Button">
+            <Setter Property="Background" Value="#eda741"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="BorderBrush" Value="Black"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Padding" Value="6,2"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Style.Triggers>
+                <!-- Hover -->
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#D9932B"/>
+                </Trigger>
+                <!-- Pressed -->
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter Property="Background" Value="#BF7F22"/>
+                </Trigger>
+                <!-- Disabled -->
+                <Trigger Property="IsEnabled" Value="False">
+                    <Setter Property="Background" Value="#F8D8A8"/>
+                    <!-- mais claro -->
+                    <Setter Property="Foreground" Value="Black"/>
+                    <Setter Property="BorderBrush" Value="Black"/>
+                    <Setter Property="Opacity" Value="0.6"/>
+                    <!-- ofuscado -->
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+
+    <!-- Fundo com imagem compilada como Resource -->
+    <Window.Background>
+        <ImageBrush
+            ImageSource="pack://application:,,,/Wscad.VectorGraphicViewer.WpfApp;component/Assets/WSCAD-Background-VectorGraphicViewer.png"
+            Stretch="UniformToFill"
+            AlignmentX="Center"
+            AlignmentY="Center"
+            Opacity="1"/>
+    </Window.Background>
+
     <Grid Margin="24">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -25,16 +70,38 @@
             <!-- área de desenho -->
         </Grid.RowDefinitions>
 
-        <!-- Título -->
-        <TextBlock Text="Welcome to Electrix by WSCAD"
-                   FontSize="24" FontWeight="Bold"/>
+        <!-- Título + by WSCAD alinhado -->
+        <Grid Grid.Row="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Text="Welcome to Vector Graphic Viewer"
+                       FontSize="24"
+                       FontWeight="Bold"
+                       Foreground="#eda741"
+                       Grid.Row="0"
+                       HorizontalAlignment="Left"/>
+
+            <!-- ajusta a margem para ficar na mesma “largura” do título acima -->
+            <TextBlock Text="by WSCAD"
+                       FontSize="14"
+                       FontStyle="Italic"
+                       Foreground="White"
+                       Grid.Row="1"
+                       HorizontalAlignment="Left"
+                       Margin="325,0,0,0"
+                       Width="70"/>
+        </Grid>
 
         <Separator Grid.Row="1"/>
 
         <!-- Subtítulo -->
         <TextBlock Grid.Row="2"
                    Text="Choose the primitive you want to draw:"
-                   FontSize="16" Margin="0,8,0,0"/>
+                   FontSize="16" Margin="0,8,0,0"
+                   Foreground="White"/>
 
         <!-- Linha com Combo + Botão -->
         <Grid Grid.Row="4">
@@ -44,22 +111,30 @@
                 <ColumnDefinition Width="Auto"/>
             </Grid.ColumnDefinitions>
 
+            <!-- Dropdown: itens pretos -->
             <ComboBox Grid.Column="0" Height="32"
                       ItemsSource="{Binding AvailableKinds}"
-                      SelectedItem="{Binding SelectedKind, Mode=TwoWay}">
+                      SelectedItem="{Binding SelectedKind, Mode=TwoWay}"
+                      Foreground="Black"
+                      Background="#EEE"
+                      BorderBrush="Gray">
                 <ComboBox.ItemTemplate>
                     <DataTemplate>
-                        <TextBlock Text="{Binding}" />
+                        <TextBlock Text="{Binding}" Foreground="Black"/>
                     </DataTemplate>
                 </ComboBox.ItemTemplate>
             </ComboBox>
 
-            <Button Grid.Column="2" Content="Draw" Height="32" Width="100"
-                    Command="{Binding DrawCommand}" />
+            <!-- Botão com estilo novo -->
+            <Button Grid.Column="2"
+                    Content="Draw"
+                    Height="32" Width="100"
+                    Command="{Binding DrawCommand}"
+                    Style="{StaticResource PrimaryButton}"/>
         </Grid>
 
         <!-- Painel de Debug (duas linhas) -->
-        <GroupBox Grid.Row="6" Header="Debug" Margin="0,0,0,0">
+        <GroupBox Grid.Row="6" Header="Debug" Margin="0,0,0,0" Foreground="White">
             <TextBox Text="{Binding DebugText}"
                      IsReadOnly="True"
                      TextWrapping="Wrap"
@@ -67,12 +142,13 @@
                      AcceptsReturn="True"
                      BorderThickness="0"
                      Background="Transparent"
+                     Foreground="White"
                      Height="40"/>
         </GroupBox>
 
-        <!-- Área de desenho (apenas UM GroupBox, como o Debug) -->
-        <GroupBox Grid.Row="8" Header="Drawn Area">
-            <Canvas x:Name="Surface" Background="White"/>
+        <!-- Área de desenho com leve transparência -->
+        <GroupBox Grid.Row="8" Header="Drawn Area" Foreground="White">
+            <Canvas x:Name="Surface" Background="#85FFFFFF"/>
         </GroupBox>
     </Grid>
 </Window>

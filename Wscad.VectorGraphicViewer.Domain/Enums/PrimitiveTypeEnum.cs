@@ -5,8 +5,8 @@
         Unknown = 0,
         Line,
         Circle,
-        Triangle,
-        Rectangle,
-        Polygon
+        Triangle
+        //Rectangle
+        //Polygon
     }
 }

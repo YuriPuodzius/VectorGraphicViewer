@@ -12,7 +12,7 @@ namespace Wscad.VectorGraphicViewer.WpfApp;
 
         public MainWindow(MainViewModel vm)
         {
-            InitializeComponent();   // volta a existir
+            InitializeComponent();
             DataContext = vm;
 
             // registra desenhistas disponíveis
@@ -20,8 +20,9 @@ namespace Wscad.VectorGraphicViewer.WpfApp;
             {
                 new LineDrawer(),
                 new CircleDrawer(),
-                new TriangleDrawer(),
-                // amanhã: new RectangleDrawer(), new PolygonDrawer()
+                new TriangleDrawer()
+                // new RectangleDrawer(),
+                // new PolygonDrawer()
             });
 
             vm.DrawRequested += OnDrawRequested;

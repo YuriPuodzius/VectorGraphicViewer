@@ -21,8 +21,8 @@ namespace Wscad.VectorGraphicViewer.Domain.Extensions
                 "line" => PrimitiveTypeEnum.Line,
                 "circle" => PrimitiveTypeEnum.Circle,
                 "triangle" => PrimitiveTypeEnum.Triangle,
-                "rectangle" => PrimitiveTypeEnum.Rectangle,
-                "polygon" => PrimitiveTypeEnum.Polygon,
+                //"rectangle" => PrimitiveTypeEnum.Rectangle,
+                //"polygon" => PrimitiveTypeEnum.Polygon,
                 _ => PrimitiveTypeEnum.Unknown
             };
         }
