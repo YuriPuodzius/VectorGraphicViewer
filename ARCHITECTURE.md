@@ -10,6 +10,9 @@ This approach allows the system to easily support **pluggable data sources** (e.
 
 ## 📁 Project Structure
 
+<details>
+<summary>Expand project structure</summary>
+
 ```text
 Wscad.VectorGraphicViewer.Application
 └─ Orchestration
@@ -70,12 +73,14 @@ Wscad.VectorGraphicViewer.WpfApp
 │  └─ MainViewModel.cs
 ├─ Commands
 │  └─ RelayCommand.cs
-├─ Drawing
-│  ├─ PrimitiveRenderCoordinator.cs
-│  ├─ LineDrawer.cs
-│  ├─ CircleDrawer.cs
-│  └─ TriangleDrawer.cs
-└─ appSettings.(Development|Staging|Production).json
+└─ Drawing
+   ├─ PrimitiveRenderCoordinator.cs
+   ├─ LineDrawer.cs
+   ├─ CircleDrawer.cs
+   └─ TriangleDrawer.cs
+appSettings.(Development|Staging|Production).json
+
+</details>
 
 ---
 
@@ -102,7 +107,7 @@ Wscad.VectorGraphicViewer.WpfApp
    - `RelayCommand` connects UI actions to application logic.  
    - `PrimitiveRenderCoordinator` delegates rendering to specific drawers (`LineDrawer`, `CircleDrawer`, `TriangleDrawer`).  
    - Acts as the **entry point**, configuring DI, loading app settings, and rendering primitives on a WPF `Canvas`.  
-
+   
 ---
 
 ## 🔑 Design Decisions
