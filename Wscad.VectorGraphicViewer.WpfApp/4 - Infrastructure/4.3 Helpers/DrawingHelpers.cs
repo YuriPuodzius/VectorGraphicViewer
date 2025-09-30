@@ -1,16 +1,12 @@
-﻿// WpfApp/Infrastructure/Drawing/DrawingHelpers.cs
-using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿namespace Wscad.VectorGraphicViewer.WpfApp.Infrastructure.Helpers;
+
 using System.Windows.Controls;
 using System.Windows.Media;
 using Wscad.VectorGraphicViewer.Domain.Entities;
 
-namespace Wscad.VectorGraphicViewer.WpfApp.Infrastructure.Helpers;
-
 internal static class DrawingHelpers
 {
-    // Calcula transform (mundo->tela) mantendo aspecto e Y pra cima
+    // Calculates transform (world → screen) while preserving aspect ratio and flipping Y upwards
     public static (Func<double, double> Tx, Func<double, double> Ty) CreateTransform(
         Canvas surface, IEnumerable<(double x, double y)> worldPoints, double padding = 10)
     {

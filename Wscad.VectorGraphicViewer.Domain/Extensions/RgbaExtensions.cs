@@ -1,8 +1,7 @@
-﻿using System.Globalization;
+﻿namespace Wscad.VectorGraphicViewer.Domain.Extensions;
+
+using System.Globalization;
 using Wscad.VectorGraphicViewer.Domain.ValueObjects;
-
-namespace Wscad.VectorGraphicViewer.Domain.Extensions;
-
 
 public static class RgbaExtensions
 {
@@ -21,7 +20,7 @@ public static class RgbaExtensions
     {
         string[] parts = text.Split(';');
 
-        byte r = 0, g = 0, b = 0, a = 255; // inicialização padrão
+        byte r = 0, g = 0, b = 0, a = 255; // default inicialization
         bool ok = byte.TryParse(parts[0], NumberStyles.Integer, CultureInfo.InvariantCulture, out r)
                && byte.TryParse(parts[1], NumberStyles.Integer, CultureInfo.InvariantCulture, out g)
                && byte.TryParse(parts[2], NumberStyles.Integer, CultureInfo.InvariantCulture, out b);

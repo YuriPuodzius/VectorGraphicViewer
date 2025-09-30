@@ -1,9 +1,8 @@
-﻿// WpfApp/Infrastructure/Drawing/IPrimitiveDrawer.cs
+﻿namespace Wscad.VectorGraphicViewer.WpfApp.Infrastructure.Drawing.Contracts;
+
 using System.Windows.Controls;
 using Wscad.VectorGraphicViewer.Domain.Entities;
 using Wscad.VectorGraphicViewer.Domain.Enums;
-
-namespace Wscad.VectorGraphicViewer.WpfApp.Infrastructure.Drawing.Contracts;
 
 public interface IPrimitiveDrawer
 {

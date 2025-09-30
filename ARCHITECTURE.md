@@ -66,6 +66,15 @@ Wscad.VectorGraphicViewer.Infrastructure
 Wscad.VectorGraphicViewer.WpfApp
 ├─ App.xaml / App.xaml.cs
 ├─ MainWindow.xaml
+├─ ViewModels
+│  └─ MainViewModel.cs
+├─ Commands
+│  └─ RelayCommand.cs
+├─ Drawing
+│  ├─ PrimitiveRenderCoordinator.cs
+│  ├─ LineDrawer.cs
+│  ├─ CircleDrawer.cs
+│  └─ TriangleDrawer.cs
 └─ appSettings.(Development|Staging|Production).json
 
 ---
@@ -74,24 +83,25 @@ Wscad.VectorGraphicViewer.WpfApp
 
 1. **Application Layer**  
    - `PrimitiveService` orchestrates data loading and delegates calculations to the domain.  
-   - Exposes **use case-oriented interfaces** (e.g., `IPrimitiveService`).
+   - Exposes **use case-oriented interfaces** (e.g., `IPrimitiveService`).  
 
 2. **Domain Layer**  
    - Holds the **business entities** (`Primitive`, `PointD`, `Rgba`) and **rules** (`GeometryService`).  
    - Defines contracts (`IPrimitiveRepository`, `IPrimitivesDataSource`) that are later implemented by the Infrastructure.  
-   - Totally agnostic of external technologies (JSON, XML, APIs, databases).
+   - Totally agnostic of external technologies (JSON, XML, APIs, databases).  
 
 3. **Infrastructure Layer**  
    - Provides **DataSources** (JSON, XML, API), each configurable via `appSettings.*.json`.  
    - Uses **DTOs + Mappers** to translate external formats into domain entities.  
    - `PrimitiveRepository` coordinates between `IPrimitivesDataSource` and the Domain.  
-   - Clear demonstration of **Ports (interfaces in Domain)** and **Adapters (implementations in Infrastructure)**.
+   - Clear demonstration of **Ports (interfaces in Domain)** and **Adapters (implementations in Infrastructure)**.  
 
 4. **Presentation Layer (WPF)**  
-   - Entry point of the application.  
-   - Configures Dependency Injection.  
-   - Reads configuration (`appSettings`) to decide which DataSource to bind at runtime.  
-   - Displays primitives on screen.  
+   - Built with **MVVM**.  
+   - `MainViewModel` binds primitives and commands to the UI (`MainWindow`).  
+   - `RelayCommand` connects UI actions to application logic.  
+   - `PrimitiveRenderCoordinator` delegates rendering to specific drawers (`LineDrawer`, `CircleDrawer`, `TriangleDrawer`).  
+   - Acts as the **entry point**, configuring DI, loading app settings, and rendering primitives on a WPF `Canvas`.  
 
 ---
 
@@ -100,12 +110,12 @@ Wscad.VectorGraphicViewer.WpfApp
 1. **Ports and Adapters (Hexagonal)**  
    - *Ports* → Defined in **Domain** as interfaces (`IPrimitivesDataSource`, `IPrimitiveRepository`).  
    - *Adapters* → Implemented in **Infrastructure** (e.g., `PrimitivesJsonSource`, `PrimitivesXmlSource`, `PrimitivesApiSource`).  
-   - This makes the **domain independent from technical details**.
+   - This makes the **domain independent from technical details**.  
 
 2. **DTOs and Mappers**  
    - Each data source (JSON, XML, API) has its **own DTOs** that reflect the raw format.  
    - Mappers convert DTOs → **Domain Entities**.  
-   - Ensures the **Domain remains agnostic** of serialization details.
+   - Ensures the **Domain remains agnostic** of serialization details.  
 
 3. **Repository with In-Memory Cache**  
    - `PrimitiveRepository` centralizes access to primitives.  
@@ -113,7 +123,11 @@ Wscad.VectorGraphicViewer.WpfApp
 
 4. **Value Objects & Extensions**  
    - `PointD` and `Rgba` are immutable **Value Objects**.  
-   - Extension methods provide safe parsing (`TryParse`) and domain logic helpers.
+   - Extension methods provide safe parsing (`TryParse`) and domain logic helpers.  
+
+5. **MVVM for WPF UI**  
+   - The presentation layer uses **MVVM** to separate UI concerns from application logic.  
+   - Rendering logic is delegated to **Drawer classes**, keeping the ViewModels thin and UI-focused.  
 
 ---
 

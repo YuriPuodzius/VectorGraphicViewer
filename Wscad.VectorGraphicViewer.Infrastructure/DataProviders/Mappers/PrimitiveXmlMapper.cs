@@ -2,7 +2,7 @@
 
 using Wscad.VectorGraphicViewer.Domain.Entities;
 using Wscad.VectorGraphicViewer.Domain.ValueObjects;
-using Wscad.VectorGraphicViewer.Domain.Extensions; // PointExtensions, RgbaExtensions
+using Wscad.VectorGraphicViewer.Domain.Extensions;
 using Wscad.VectorGraphicViewer.Infrastructure.DataProviders.Dtos;
 
 /// <summary>

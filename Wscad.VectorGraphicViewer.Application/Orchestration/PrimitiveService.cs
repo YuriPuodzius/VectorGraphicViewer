@@ -7,6 +7,18 @@ using Wscad.VectorGraphicViewer.Domain.Entities;
 using Wscad.VectorGraphicViewer.Domain.Enums;
 using Wscad.VectorGraphicViewer.Domain.Services;
 
+/// <summary>
+/// PrimitiveService acts as an orchestration layer,
+/// delegating calls to repositories and domain services,
+/// and preparing the results to be returned to the application.
+/// 
+/// It serves as the bridge between the presentation layer
+/// and the domain, ensuring decoupling and preserving
+/// business rules. This is also the right place for simple
+/// adaptations, such as mapping entities into Models
+/// tailored for the UI or external interfaces.
+/// </summary>
+
 public sealed class PrimitiveService : IPrimitiveService
 {
     private readonly IPrimitiveRepository _repo;
@@ -22,9 +34,7 @@ public sealed class PrimitiveService : IPrimitiveService
     {
         IReadOnlyList<Primitive> primitiveList = _repo.GetAll();
 
-        // Right place for simple policies (e.g., lazy normalization, logging, etc.)
 
-        // Example: adjust color to ensure default alpha (without modifying the entity itself)
         _ = primitiveList.Select(p => _geometry.GetColor(p)).ToList();
         return primitiveList;
     }
@@ -33,9 +43,7 @@ public sealed class PrimitiveService : IPrimitiveService
     {
         Primitive? primitiveTyped = _repo.GetByType(type);
 
-        // Right place for simple policies (e.g., lazy normalization, logging, etc.)
 
-        // Example: adjust color to ensure default alpha (without modifying the entity itself)
 
         _ = _geometry.GetColor(primitiveTyped);
 

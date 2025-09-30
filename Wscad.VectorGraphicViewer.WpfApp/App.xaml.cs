@@ -19,8 +19,6 @@ using Wscad.VectorGraphicViewer.Infrastructure.Repository;
 using Wscad.VectorGraphicViewer.WpfApp;
 using Wscad.VectorGraphicViewer.WpfApp.ViewModels;
 
-
-
 // Alias to avoid conflict with System.Windows.Application
 using WpfApplication = System.Windows.Application;
 
@@ -43,8 +41,7 @@ public partial class App : WpfApplication
             })
             .ConfigureServices((ctx, services) =>
             {
-                // UI
-                services.AddSingleton<MainWindow>();
+                
 
                 // === DataSourceConfig ===
                 IConfiguration ds = ctx.Configuration.GetSection("DataSourceConfig");
@@ -75,8 +72,12 @@ public partial class App : WpfApplication
                         throw new InvalidOperationException("Unknown DataSourceConfig.PrimitiveDataSourceType value.");
                 }
 
-                services.AddSingleton<IPrimitiveService, PrimitiveService>(); // Orchestrator
-                services.AddSingleton<IGeometryService, GeometryService>();   // Domain service (puro)
+                // UI
+                services.AddSingleton<MainWindow>();
+
+                // Application
+                services.AddSingleton<IPrimitiveService, PrimitiveService>();
+                services.AddSingleton<IGeometryService, GeometryService>();
                 services.AddSingleton<IPrimitiveRepository, PrimitiveRepository>();
                 services.AddSingleton<MainViewModel>();
             })

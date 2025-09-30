@@ -15,7 +15,7 @@ namespace Wscad.VectorGraphicViewer.WpfApp;
             InitializeComponent();
             DataContext = vm;
 
-            // registra desenhistas disponíveis
+            // Register drawers availables;
             _renderer = new PrimitiveRenderCoordinator(new IPrimitiveDrawer[]
             {
                 new LineDrawer(),

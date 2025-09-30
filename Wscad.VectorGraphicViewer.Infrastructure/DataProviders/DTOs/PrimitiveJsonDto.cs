@@ -4,7 +4,7 @@
 /// DTO that mirrors the JSON payload.
 /// Keeps everything as strings/primitives to stay format-agnostic.
 /// </summary>
-internal sealed class PrimitiveJsonDto
+internal class PrimitiveJsonDto
 {
     public string? type { get; set; }
 

@@ -1,11 +1,11 @@
-﻿using System.Windows.Controls;
+﻿namespace Wscad.VectorGraphicViewer.WpfApp.Infrastructure.Drawing.Drawers;
+
+using System.Windows.Controls;
 using System.Windows.Shapes;
 using Wscad.VectorGraphicViewer.Domain.Entities;
 using Wscad.VectorGraphicViewer.Domain.Enums;
 using Wscad.VectorGraphicViewer.WpfApp.Infrastructure.Drawing.Contracts;
 using Wscad.VectorGraphicViewer.WpfApp.Infrastructure.Helpers;
-
-namespace Wscad.VectorGraphicViewer.WpfApp.Infrastructure.Drawing.Drawers;
 
 public sealed class LineDrawer : IPrimitiveDrawer
 {

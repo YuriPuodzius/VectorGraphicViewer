@@ -55,7 +55,7 @@ public class PrimitivesXmlSource : IPrimitivesDataSource
     }
 }
 
-// ===== DTOs usados apenas na Infra =====
+// ===== DTOs used only in Infrastructure =====
 
 /// <summary>
 /// Envelope DTO for XML:

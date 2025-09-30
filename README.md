@@ -20,7 +20,7 @@ The project is designed with **SOLID** principles and follows the **Ports and Ad
   - `PrimitiveService` orchestrates access to the repository and prepares results for the UI.
   - `GeometryService` centralizes business rules (e.g., geometric calculations).
 - **Ports and Adapters**: data source interfaces (`IPrimitivesDataSource`) act as **ports**, while concrete implementations (JSON, XML, API) are **adapters**.  
-- **Environment-based configuration**: automatically switches between environments (`Development`, `Production`) using `DOTNET_ENVIRONMENT`.  
+- **Environment-based configuration**: automatically switches between environments (`Development`,`Staging` or `Production`) using `DOTNET_ENVIRONMENT`.  
 - **In-memory caching** in the repository to simulate efficient retrieval (GetAll vs. GetByType).  
 
 ---
@@ -29,7 +29,7 @@ The project is designed with **SOLID** principles and follows the **Ports and Ad
 
 - **Domain**  
   Entities (`Primitive`), Enums, and Value Objects (`Rgba`, `Point`).  
-  Contains the **business core** and rules (GeometryService).  
+  Contains the **business core** and rules (`GeometryService`).  
 
 - **Application**  
   Orchestration services (`PrimitiveService`), configuration binding (`IOptions`), and dependency injection setup.  
@@ -39,8 +39,8 @@ The project is designed with **SOLID** principles and follows the **Ports and Ad
   Also includes repository and mapping logic for deserialization.  
 
 - **WPF UI**  
-  Entry point (`App.xaml.cs`) based on MVVM, consuming services via DI.  
-  Responsible only for user interaction and presentation.  
+  Based on **MVVM**, responsible for presentation and user interaction.  
+  Rendering is handled by pluggable **Drawer** classes, coordinated by `PrimitiveRenderCoordinator`.  
 
 ---
 

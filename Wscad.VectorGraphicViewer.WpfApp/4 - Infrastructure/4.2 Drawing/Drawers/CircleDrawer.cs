@@ -1,13 +1,11 @@
-﻿using System;
+﻿namespace Wscad.VectorGraphicViewer.WpfApp.Infrastructure.Drawing.Drawers;
+
 using System.Windows.Controls;
-using System.Windows.Media;
 using System.Windows.Shapes;
 using Wscad.VectorGraphicViewer.Domain.Entities;
 using Wscad.VectorGraphicViewer.Domain.Enums;
 using Wscad.VectorGraphicViewer.WpfApp.Infrastructure.Drawing.Contracts;
 using Wscad.VectorGraphicViewer.WpfApp.Infrastructure.Helpers;
-
-namespace Wscad.VectorGraphicViewer.WpfApp.Infrastructure.Drawing.Drawers;
 
 public sealed class CircleDrawer : IPrimitiveDrawer
 {
@@ -24,14 +22,13 @@ public sealed class CircleDrawer : IPrimitiveDrawer
         var cx = p.Center!.Value.X;
         var cy = p.Center.Value.Y;
 
-        // usa extremos do círculo para o fit
         var points = new (double x, double y)[]
         {
             (cx - r, cy - r), (cx + r, cy + r), (cx + r, cy - r), (cx - r, cy + r)
         };
         var (Tx, Ty) = DrawingHelpers.CreateTransform(surface, points);
 
-        double diam = 2 * r * (Tx(cx + 1) - Tx(cx)); // escala local: 1 no mundo -> px
+        double diam = 2 * r * (Tx(cx + 1) - Tx(cx));
         diam = Math.Max(diam, 10);
 
         double Cx = Tx(cx);

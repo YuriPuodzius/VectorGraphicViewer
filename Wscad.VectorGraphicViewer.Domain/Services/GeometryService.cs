@@ -4,6 +4,24 @@ using Wscad.VectorGraphicViewer.Domain.ValueObjects;
 
 namespace Wscad.VectorGraphicViewer.Domain.Services;
 
+/// <summary>
+/// GeometryService centralizes the domain business rules,
+/// i.e., the logic that defines which primitives are available,
+/// how colors and points are handled, etc.
+///
+/// Unlike the *Drawers* (in the WPF/Infrastructure layer),
+/// this service does not deal with visual rendering.
+/// *Drawers* are only responsible for translating a Primitive
+/// into a drawing on the screen (UI), while this service
+/// contains pure business rules, independent of the UI.
+///
+/// In short:
+/// - Domain.Services (e.g., GeometryService): pure business rules,
+///   independent of any UI technology.
+/// - Infrastructure.Drawing.Drawers: presentation rules,
+///   specific to rendering a Primitive in WPF.
+/// </summary>
+
 public class GeometryService : IGeometryService
 {
     public IReadOnlyList<PrimitiveTypeEnum> AvailablePrimitivesRules(IReadOnlyList<Primitive> primitives)

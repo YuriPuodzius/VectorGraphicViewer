@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using System.Windows.Controls;
+﻿using System.Windows.Controls;
 using Wscad.VectorGraphicViewer.Domain.Entities;
 using Wscad.VectorGraphicViewer.Domain.Enums;
 using Wscad.VectorGraphicViewer.WpfApp.Infrastructure.Drawing.Contracts;
@@ -11,8 +9,7 @@ public sealed class PrimitiveRenderCoordinator
 {
     private readonly IReadOnlyDictionary<PrimitiveTypeEnum, IPrimitiveDrawer> _byKind;
 
-    public PrimitiveRenderCoordinator(IEnumerable<IPrimitiveDrawer> drawers)
-        => _byKind = drawers.ToDictionary(d => d.Kind);
+    public PrimitiveRenderCoordinator(IEnumerable<IPrimitiveDrawer> drawers) => _byKind = drawers.ToDictionary(d => d.Kind);
 
     public void Render(Canvas surface, Primitive p)
     {
