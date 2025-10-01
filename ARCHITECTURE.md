@@ -67,19 +67,24 @@ Wscad.VectorGraphicViewer.Infrastructure
       └─ primitives.xml
 
 Wscad.VectorGraphicViewer.WpfApp
-├─ App.xaml / App.xaml.cs
-├─ MainWindow.xaml
-├─ ViewModels
-│  └─ MainViewModel.cs
-├─ Commands
-│  └─ RelayCommand.cs
-└─ Drawing
-   ├─ PrimitiveRenderCoordinator.cs
-   ├─ LineDrawer.cs
-   ├─ CircleDrawer.cs
-   └─ TriangleDrawer.cs
-appSettings.(Development|Staging|Production).json
-
+├─ Properties (AssemblyInfo.cs)
+├─ 0 - AppSettings (appSettings.(Development|Staging|Production).json)
+├─ 1 - Views (MainWindow.xaml)
+├─ 2 - ViewModels (MainViewModel.cs)
+├─ 3 - Commands (RelayCommand.cs)
+├─ 4 - Rendering
+│  ├─ 4.1 Orchestration (PrimitiveRenderCoordinator.cs)
+│  ├─ 4.2 Drawing
+│  │  ├─ Contracts (IPrimitiveDrawer.cs)
+│  │  └─ Drawers
+│  │     ├─ CircleDrawer.cs
+│  │     ├─ LineDrawer.cs
+│  │     └─ TriangleDrawer.cs
+│  └─ 4.3 Helpers (DrawingHelpers.cs)
+├─ Assets (WSCAD-Background-VectorGraphicViewer.png)
+├─ App.xaml
+└─ App.xaml.cs
+```
 </details>
 
 ---
@@ -105,8 +110,15 @@ appSettings.(Development|Staging|Production).json
    - Built with **MVVM**.  
    - `MainViewModel` binds primitives and commands to the UI (`MainWindow`).  
    - `RelayCommand` connects UI actions to application logic.  
-   - `PrimitiveRenderCoordinator` delegates rendering to specific drawers (`LineDrawer`, `CircleDrawer`, `TriangleDrawer`).  
+   - `Rendering` folder contains the drawing pipeline:
+     - `PrimitiveRenderCoordinator` orchestrates the drawing process.
+     - `LineDrawer`, `CircleDrawer`, `TriangleDrawer` implement the rendering of each primitive.  
    - Acts as the **entry point**, configuring DI, loading app settings, and rendering primitives on a WPF `Canvas`.  
+   - MVVM mapping in this project:
+     - **Model** → Domain layer (`Primitive`, `Rgba`, `PointD`, `GeometryService`, etc.).  
+     - **ViewModel** → `MainViewModel`.  
+     - **View** → `MainWindow.xaml`.  
+     - **Rendering** → UI-specific rendering services (decoupled from domain). 
    
 ---
 
