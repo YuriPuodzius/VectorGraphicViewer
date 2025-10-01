@@ -1,8 +1,13 @@
 # Wscad.VectorGraphicViewer
 
-A **.NET 8 + WPF** application developed as a technical challenge to render graphic primitives (lines, circles, and triangles) from different **pluggable data sources** (JSON, XML, and API).
+A **.NET 8 + WPF** application developed as a technical challenge to render graphic primitives (lines, circles, and triangles) from different **pluggable data sources** (JSON, XML, and API), with flexibility to easily extend support for new primitives.  
 
-The project is designed with **SOLID** principles and follows the **Ports and Adapters (Hexagonal) Architecture**, ensuring a clean separation between the core domain and infrastructure. This makes data sources easily replaceable without impacting the business logic, promoting flexibility and maintainability.
+The project is designed with **SOLID** and **Clean Code** principles and follows the **Ports and Adapters (Hexagonal) Architecture**, ensuring a clean separation between the core domain and infrastructure. This makes data sources and rendering logic easily replaceable without impacting the business logic, promoting flexibility and maintainability.  
+
+In addition, the implementation leverages classic design patterns such as:  
+- **Repository** — centralizes access and caching, isolating data origin.  
+- **Strategy** — enables flexible selection of data sources and rendering logic at runtime.  
+- **Adapter** — bridges external formats (JSON, XML, API) to the domain contracts.  
 
 📖 For a deeper dive into the design, see [ARCHITECTURE.md](ARCHITECTURE.md).
 
@@ -22,7 +27,8 @@ The project is designed with **SOLID** principles and follows the **Ports and Ad
 - **Ports and Adapters**: data source interfaces (`IPrimitivesDataSource`) act as **ports**, while concrete implementations (JSON, XML, API) are **adapters**.  
 - **Environment-based configuration**: automatically switches between environments (`Development`,`Staging` or `Production`) using `DOTNET_ENVIRONMENT`.  
 - **In-memory caching** in the repository to simulate efficient retrieval (GetAll vs. GetByType).  
-
+- **WPF UI with MVVM**: clear separation between `View` (MainWindow), `ViewModel` (MainViewModel), and rendering logic.  
+- **Extensible rendering pipeline**: `PrimitiveRenderCoordinator` delegates drawing to specialized **Drawer classes**, making it easy to add new primitives without impacting existing code.  
 ---
 
 ## 🏗️ Architecture
