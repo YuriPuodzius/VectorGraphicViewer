@@ -1,8 +1,8 @@
 # 🏗️ Architecture Overview
 
-This project follows a **Ports and Adapters (Hexagonal) Architecture**, ensuring a clean separation between the **Domain (core business logic)** and the **Infrastructure (data access, configuration, and external concerns)**.  
+This project follows a **Ports and Adapters (Hexagonal) Architecture**, ensuring a clean separation between the **Domain (core business logic)**, the **Infrastructure (data access, configuration, and external concerns)**, and the **Presentation Layer (WPF, MVVM)**.  
 
-This approach allows the system to easily support **pluggable data sources** (e.g., JSON, XML, API) without impacting the business rules.
+This approach allows the system to easily support **pluggable data sources** (e.g., JSON, XML, API) and extend new **primitives/rendering strategies** without impacting the business rules.
 
 📖 *For a quick project summary, see the [README.md](./README.md).*
 
