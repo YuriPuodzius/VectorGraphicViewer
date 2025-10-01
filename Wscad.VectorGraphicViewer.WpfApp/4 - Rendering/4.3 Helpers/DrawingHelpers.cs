@@ -1,4 +1,4 @@
-﻿namespace Wscad.VectorGraphicViewer.WpfApp.Infrastructure.Helpers;
+﻿namespace Wscad.VectorGraphicViewer.WpfApp.Rendering.Helpers;
 
 using System.Windows.Controls;
 using System.Windows.Media;

@@ -1,9 +1,9 @@
 ﻿using System.Windows.Controls;
 using Wscad.VectorGraphicViewer.Domain.Entities;
 using Wscad.VectorGraphicViewer.Domain.Enums;
-using Wscad.VectorGraphicViewer.WpfApp.Infrastructure.Drawing.Contracts;
+using Wscad.VectorGraphicViewer.WpfApp.Rendering.Drawing.Contracts;
 
-namespace Wscad.VectorGraphicViewer.WpfApp.Infrastructure.Orchestration;
+namespace Wscad.VectorGraphicViewer.WpfApp.Rendering.Orchestration;
 
 public sealed class PrimitiveRenderCoordinator
 {

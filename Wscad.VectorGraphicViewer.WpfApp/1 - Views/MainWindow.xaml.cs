@@ -1,8 +1,8 @@
 ﻿using System.Windows;
 using Wscad.VectorGraphicViewer.Domain.Entities;
-using Wscad.VectorGraphicViewer.WpfApp.Infrastructure.Drawing.Contracts;
-using Wscad.VectorGraphicViewer.WpfApp.Infrastructure.Drawing.Drawers;
-using Wscad.VectorGraphicViewer.WpfApp.Infrastructure.Orchestration;
+using Wscad.VectorGraphicViewer.WpfApp.Rendering.Drawing.Contracts;
+using Wscad.VectorGraphicViewer.WpfApp.Rendering.Drawing.Drawers;
+using Wscad.VectorGraphicViewer.WpfApp.Rendering.Orchestration;
 using Wscad.VectorGraphicViewer.WpfApp.ViewModels;
 
 namespace Wscad.VectorGraphicViewer.WpfApp; 

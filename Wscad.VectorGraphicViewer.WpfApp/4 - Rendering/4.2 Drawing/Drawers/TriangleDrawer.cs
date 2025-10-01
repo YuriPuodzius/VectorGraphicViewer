@@ -1,12 +1,12 @@
-﻿namespace Wscad.VectorGraphicViewer.WpfApp.Infrastructure.Drawing.Drawers;
+﻿namespace Wscad.VectorGraphicViewer.WpfApp.Rendering.Drawing.Drawers;
 
 using System.Windows.Controls;
 using System.Windows.Media;
 using System.Windows.Shapes;
 using Wscad.VectorGraphicViewer.Domain.Entities;
 using Wscad.VectorGraphicViewer.Domain.Enums;
-using Wscad.VectorGraphicViewer.WpfApp.Infrastructure.Drawing.Contracts;
-using Wscad.VectorGraphicViewer.WpfApp.Infrastructure.Helpers;
+using Wscad.VectorGraphicViewer.WpfApp.Rendering.Drawing.Contracts;
+using Wscad.VectorGraphicViewer.WpfApp.Rendering.Helpers;
 
 public sealed class TriangleDrawer : IPrimitiveDrawer
 {

@@ -1,4 +1,4 @@
-﻿namespace Wscad.VectorGraphicViewer.WpfApp.Infrastructure.Drawing.Contracts;
+﻿namespace Wscad.VectorGraphicViewer.WpfApp.Rendering.Drawing.Contracts;
 
 using System.Windows.Controls;
 using Wscad.VectorGraphicViewer.Domain.Entities;
