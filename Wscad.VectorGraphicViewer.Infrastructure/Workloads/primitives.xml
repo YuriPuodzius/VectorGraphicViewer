@@ -16,8 +16,15 @@
     <a>-15; -20</a>
     <b>15; -20,3</b>
     <c>0; 21</c>
-    <filled>true</filled>
+    <filled>false</filled>
     <color>127; 255; 0; 255</color>
-    <isActive>false</isActive>
+    <isActive>true</isActive>
   </primitive>
+  <!--<primitive type="rectangle">
+    <a>-200; -100</a>
+    <b>200; 100</b>
+    <filled>true</filled>
+    <color>200; 30; 144; 255</color>
+    <isActive>true</isActive>
+  </primitive>-->
 </primitives>

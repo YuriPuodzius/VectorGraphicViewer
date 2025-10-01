@@ -16,7 +16,6 @@ public sealed class TriangleDrawer : IPrimitiveDrawer
 
     public void Draw(Canvas surface, Primitive p)
     {
-        surface.Children.Clear();
         var (stroke, fill) = DrawingHelpers.BuildBrushes(p);
 
         var ptsWorld = new (double x, double y)[]

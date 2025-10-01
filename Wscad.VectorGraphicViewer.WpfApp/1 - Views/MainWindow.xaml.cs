@@ -20,8 +20,8 @@ namespace Wscad.VectorGraphicViewer.WpfApp;
             {
                 new LineDrawer(),
                 new CircleDrawer(),
-                new TriangleDrawer()
-                // new RectangleDrawer(),
+                new TriangleDrawer(),
+                //new RectangleDrawer(),
                 // new PolygonDrawer()
             });
 

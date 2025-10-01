@@ -7,22 +7,34 @@ public static class PointExtensions
 {
     public static Point Parse(string text)
     {
-        string[] parts = text.Split(';');
-        return new Point(
-            double.Parse(parts[0], CultureInfo.InvariantCulture),
-            double.Parse(parts[1], CultureInfo.InvariantCulture)
-        );
+        if (!TryParse(text, out var p))
+            throw new FormatException($"Invalid point: '{text}'");
+
+        return p;
     }
 
     public static bool TryParse(string text, out Point result)
     {
-        string[] parts = text.Split(';');
+        result = default;
 
-        double x = 0, y = 0;
-        bool ok = double.TryParse(parts[0], NumberStyles.Float, CultureInfo.InvariantCulture, out x)
-               && double.TryParse(parts[1], NumberStyles.Float, CultureInfo.InvariantCulture, out y);
+        if (string.IsNullOrWhiteSpace(text))
+            return false;
 
-        result = ok ? new Point(x, y) : default;
-        return ok;
+        var parts = text.Split(';');
+        if (parts.Length < 2)
+            return false;
+
+        var sx = parts[0].Trim().Replace(',', '.');
+        var sy = parts[1].Trim().Replace(',', '.');
+
+        double x, y;
+        bool okX = double.TryParse(sx, NumberStyles.Float, CultureInfo.InvariantCulture, out x);
+        bool okY = double.TryParse(sy, NumberStyles.Float, CultureInfo.InvariantCulture, out y);
+
+        if (!(okX && okY))
+            return false;
+
+        result = new Point(x, y);
+        return true;
     }
 }

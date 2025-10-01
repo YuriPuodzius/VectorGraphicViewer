@@ -34,7 +34,6 @@ public sealed class PrimitiveService : IPrimitiveService
     {
         IReadOnlyList<Primitive> primitiveList = _repo.GetAll();
 
-
         _ = primitiveList.Select(p => _geometry.GetColor(p)).ToList();
         return primitiveList;
     }
@@ -42,8 +41,6 @@ public sealed class PrimitiveService : IPrimitiveService
     public Primitive? GetByType(PrimitiveTypeEnum type)
     {
         Primitive? primitiveTyped = _repo.GetByType(type);
-
-
 
         _ = _geometry.GetColor(primitiveTyped);
 

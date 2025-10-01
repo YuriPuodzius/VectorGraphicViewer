@@ -15,7 +15,6 @@ public sealed class LineDrawer : IPrimitiveDrawer
 
     public void Draw(Canvas surface, Primitive p)
     {
-        surface.Children.Clear();
         var (stroke, _) = DrawingHelpers.BuildBrushes(p);
 
         var points = new (double x, double y)[] { (p.A!.Value.X, p.A.Value.Y), (p.B!.Value.X, p.B.Value.Y) };

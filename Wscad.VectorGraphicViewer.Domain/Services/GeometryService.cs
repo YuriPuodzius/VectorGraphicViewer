@@ -28,6 +28,7 @@ public class GeometryService : IGeometryService
     {
         IReadOnlyList<PrimitiveTypeEnum> primitiveTypeEnums = primitives.Where(p => p.IsActive)
           .Select(p => p.Kind)
+          .Where(k => k != PrimitiveTypeEnum.Unknown)
           .Distinct()
           .OrderBy(k => k)
           .ToList();

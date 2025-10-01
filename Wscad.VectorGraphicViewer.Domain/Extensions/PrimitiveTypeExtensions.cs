@@ -2,6 +2,7 @@
 
 using Wscad.VectorGraphicViewer.Domain.Enums;
 
+
 public static class PrimitiveTypeExtensions
 {
     public static PrimitiveTypeEnum ParseOrUnknown(string? type)
@@ -9,17 +10,16 @@ public static class PrimitiveTypeExtensions
         if (string.IsNullOrWhiteSpace(type))
             return PrimitiveTypeEnum.Unknown;
 
-        // normaliza: "Line", "line", "LINE" => line
         string t = type.Trim().Replace("_", "").Replace("-", "").ToLowerInvariant();
 
-        return t switch
+        switch (t)
         {
-            "line" => PrimitiveTypeEnum.Line,
-            "circle" => PrimitiveTypeEnum.Circle,
-            "triangle" => PrimitiveTypeEnum.Triangle,
-            //"rectangle" => PrimitiveTypeEnum.Rectangle,
-            //"polygon" => PrimitiveTypeEnum.Polygon,
-            _ => PrimitiveTypeEnum.Unknown
-        };
+            case "line": return PrimitiveTypeEnum.Line;
+            case "circle": return PrimitiveTypeEnum.Circle;
+            case "triangle": return PrimitiveTypeEnum.Triangle;
+            //case "rectangle": return PrimitiveTypeEnum.Rectangle;
+
+            default: return PrimitiveTypeEnum.Unknown;
+        }
     }
 }

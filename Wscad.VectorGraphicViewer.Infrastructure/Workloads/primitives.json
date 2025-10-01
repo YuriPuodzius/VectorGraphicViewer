@@ -9,8 +9,8 @@
   {
     "type": "circle",
     "center": "0; 0",
-    "radius": 300.0,
-    "filled": true,
+    "radius": 15.0,
+    "filled": false,
     "color": "127; 255; 0; 0",
     "isActive": true
   },
@@ -23,4 +23,12 @@
     "color": "127; 255; 0; 255",
     "isActive": true
   }
+  //,{
+  //  "type": "rectangle",
+  //  "a": "-200; -100",
+  //  "b": "200; 100",
+  //  "filled": true,
+  //  "color": "200; 30; 144; 255",
+  //  "isActive": true
+  //}
 ]

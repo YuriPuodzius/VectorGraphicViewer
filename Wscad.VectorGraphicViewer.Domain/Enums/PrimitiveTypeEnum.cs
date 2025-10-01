@@ -3,10 +3,10 @@
     public enum PrimitiveTypeEnum
     {
         Unknown = 0,
-        Line,
-        Circle,
-        Triangle
-        //Rectangle
+        Line = 1,
+        Circle = 2,
+        Triangle = 3
+        //,Rectangle = 4
         //Polygon
     }
 }
