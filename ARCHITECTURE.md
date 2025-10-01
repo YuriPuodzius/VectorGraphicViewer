@@ -136,7 +136,7 @@ Wscad.VectorGraphicViewer.WpfApp
 
 3. **Repository with In-Memory Cache**  
    - `PrimitiveRepository` centralizes access to primitives.  
-   - Shared cache avoids repeated parsing of files or multiple API calls.  
+   - Shared cache avoids repeated parsing of files or multiple API/DataBase calls.  
 
 4. **Value Objects & Extensions**  
    - `PointD` and `Rgba` are immutable **Value Objects**.  
