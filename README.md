@@ -2,12 +2,18 @@
 
 A **.NET 8 + WPF** application developed as a technical challenge to render graphic primitives (lines, circles, and triangles) from different **pluggable data sources** (JSON, XML, and API), with flexibility to easily extend support for new primitives.  
 
-The project is designed with **SOLID** and **Clean Code** principles and follows the **Ports and Adapters (Hexagonal) Architecture**, ensuring a clean separation between the core domain and infrastructure. This makes data sources and rendering logic easily replaceable without impacting the business logic, promoting flexibility and maintainability.  
+The project is designed with **SOLID** and **Clean Code** principles and follows the **Ports and Adapters (Hexagonal) and Clean Architecture**, ensuring a clean separation between the core domain and infrastructure. This makes data sources and rendering logic easily replaceable without impacting the business logic, promoting flexibility and maintainability.  
 
 In addition, the implementation leverages classic design patterns such as:  
 - **Repository** — centralizes access and caching, isolating data origin.  
 - **Strategy** — enables flexible selection of data sources and rendering logic at runtime.  
 - **Adapter** — bridges external formats (JSON, XML, API) to the domain contracts.  
+
+## 🧩 Architecture Overview
+
+Below is the visual representation of the project structure following the .NET Clean Architecture principles:
+
+![Clean Architecture](https://github.com/YuriPuodzius/VectorGraphicViewer/blob/main/CleanArch-VectorGraphicViewer.png)
 
 📖 For a deeper dive into the design, see [ARCHITECTURE.md](ARCHITECTURE.md).
 
